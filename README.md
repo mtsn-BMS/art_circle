@@ -7,6 +7,7 @@ I call it "Art Circle" because it's so artistic.
 - Adjustable window size (specified width and height + real-time adjustment)
 - FPS limit
 - Text display (support custom font and size)
+- Screen Capture
 ## TODO List
 - Support circle specified speed change
 - Specify the direction of movement of the circle
