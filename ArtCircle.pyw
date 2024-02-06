@@ -8,8 +8,6 @@ import time             #Capture FileName
 import tkinter as tk    #GUI
 from tkinter import ttk
 
-
-
 ### Important Value ###
 running=True            #Exit Check
 
@@ -27,7 +25,7 @@ def draw(winx,winy,ballnum,fps,getfont,fntsize,word):                           
     BLACK = (0,0,0)     #Black Color
     CapReady=0          #Space Key Check
 
-    # colors, locations, sizes(and speeds) arrays for Ballnum random dots
+    # Colors,Positions,Sizes and Speeds randomlist create
     colors = [0]*ballnum
     locations = [0]*ballnum
     sizes = [0]*ballnum
@@ -35,7 +33,7 @@ def draw(winx,winy,ballnum,fps,getfont,fntsize,word):                           
 
     timer=pygame.time.Clock()   #For FPS Limit
 
-    # store random values in colors, locations, sizes(and speeds)
+    #Colors,Positions,Sizes and Speeds randomize
     for n in range(ballnum):
         colors[n] = (random.randint(0,255),random.randint(0,255),random.randint(0,255))
         locations[n] = (random.randint(0,winx), random.randint(0,winy))
@@ -63,11 +61,11 @@ def draw(winx,winy,ballnum,fps,getfont,fntsize,word):                           
                 new_x = random.randint(0,infox)   #random x
             locations[n] = (new_x, new_y)           #Refresh Locations
             
-        #Text Show(Developing...)
-        font=pygame.font.SysFont(getfont,fntsize)
-        text=font.render(word,True,(255,255,255))
-        text_w,text_h=text.get_size()
-        screen.blit(text,(infox/2-text_w/2,infoy/2-text_h/2))
+        #Text Show
+        font=pygame.font.SysFont(getfont,fntsize)    #Get Fontlist
+        text=font.render(word,True,(255,255,255))    #Write Word
+        text_w,text_h=text.get_size()                #Get Word Size
+        screen.blit(text,(infox/2-text_w/2,infoy/2-text_h/2))    #Put Word in Center
         
         #Key Check
         key_tuple=pygame.key.get_pressed()  #Get Pressed Key
@@ -121,15 +119,15 @@ while running:    #Exit Check
     lab2_=tk.Label(window,text="(NOT RECOMMENDED BIGGER THAN YOU SCREEN RESOLUTION)")
     lab4_=tk.Label(window,text="(DON'T TOO HIGH)")
     ##label grid
-    lab1.grid(row=0,sticky='e')
-    lab2.grid(row=1,sticky='e')
-    lab3.grid(row=2,sticky='e')
-    lab4.grid(row=3,sticky='e')
-    lab5.grid(row=4,sticky='e')
-    lab6.grid(row=5,sticky='e')
-    lab7.grid(row=6,sticky='e')
-    labX.grid(row=9,column=2,sticky='w')
-    labZ.grid(row=99,column=2,sticky='w')
+    lab1.grid(row=0,sticky='e')    #Width
+    lab2.grid(row=1,sticky='e')    #Height
+    lab3.grid(row=2,sticky='e')    #Ball
+    lab4.grid(row=3,sticky='e')    #FPS
+    lab5.grid(row=4,sticky='e')    #Font
+    lab6.grid(row=5,sticky='e')    #FontSize
+    lab7.grid(row=6,sticky='e')    #Text
+    labX.grid(row=9,column=2,sticky='w')    #tip1
+    labZ.grid(row=99,column=2,sticky='w')    #tip2
     lab1_.grid(row=0,column=2,sticky='w')
     lab2_.grid(row=1,column=2,sticky='w')
     lab4_.grid(row=3,column=2,sticky='w')
