@@ -14,6 +14,6 @@ I call it "Art Circle" because it's so artistic.
 - Text color and position (and orientation) adjustment
 - ......
 ## Develop & Test Environment
-Windows 10 64bit
-Python 3.12.1 64bit
+Windows 10 64bit<br>
+Python 3.12.1 64bit<br>
 (With Pygame 2.5.2 (SDL 2.28.3))
